@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Birthday, My Love</title>
+  <style>
+    :root {
+      --bg: #fdf6ff;
+      --card: #ffffff;
+      --accent: #e27dff;
+      --text: #3c2a4d;
+      --muted: #6d5b7b;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      font-family: "Inter", "Sarabun", system-ui, -apple-system, sans-serif;
+      background: radial-gradient(circle at 20% 20%, #ffe4f3 0, transparent 25%),
+                  radial-gradient(circle at 80% 0%, #e4f0ff 0, transparent 25%),
+                  var(--bg);
+      color: var(--text);
+      padding: 24px;
+    }
+    .card {
+      position: relative;
+      width: min(720px, 100%);
+      background: var(--card);
+      border-radius: 20px;
+      padding: 32px;
+      box-shadow: 0 20px 60px rgba(60, 42, 77, 0.12);
+      overflow: hidden;
+    }
+    .tag {
+      display: inline-block;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: #f8e8ff;
+      color: var(--muted);
+      font-size: 13px;
+      letter-spacing: 0.3px;
+      margin-bottom: 12px;
+    }
+    h1 {
+      margin: 0 0 12px;
+      font-size: clamp(28px, 5vw, 40px);
+      color: var(--text);
+    }
+    h1 span { color: var(--accent); }
+    p {
+      margin: 8px 0;
+      font-size: 17px;
+      line-height: 1.7;
+      color: var(--muted);
+    }
+    .signature { margin-top: 24px; font-weight: 600; color: var(--text); }
+    .cta {
+      margin-top: 18px;
+      display: inline-flex;
+      gap: 10px;
+      align-items: center;
+      padding: 12px 18px;
+      border-radius: 12px;
+      background: var(--accent);
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      box-shadow: 0 12px 25px rgba(226, 125, 255, 0.35);
+      transition: transform 0.15s ease, box-shadow 0.2s ease;
+    }
+    .cta:hover { transform: translateY(-2px); box-shadow: 0 16px 30px rgba(226, 125, 255, 0.4); }
+    .float {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+    }
+    .bubble {
+      position: absolute;
+      width: 120px; height: 120px;
+      border-radius: 50%;
+      background: radial-gradient(circle at 30% 30%, #fff, rgba(255,255,255,0) 60%),
+                  var(--accent);
+      opacity: 0.12;
+      filter: blur(0.3px);
+      animation: float 12s ease-in-out infinite;
+    }
+    .b1 { top: -20px; right: -30px; animation-delay: 0s; }
+    .b2 { bottom: -40px; left: -10px; animation-delay: 3s; width: 160px; height: 160px; }
+    .b3 { top: 30%; left: 45%; animation-delay: 6s; width: 90px; height: 90px; }
+    @keyframes float {
+      0%,100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+  </style>
+</head>
+<body>
+  <main class="card">
+    <div class="float">
+      <div class="bubble b1"></div>
+      <div class="bubble b2"></div>
+      <div class="bubble b3"></div>
+    </div>
+
+    <div class="tag">Birthday Card · For You</div>
+    <h1>Happy Birthday, <span>Pook</span> 💖</h1>
+
+    <p>ขอบคุณที่เข้ามา</p>
+    <p>ขอให้ปีหน้าเป็นปีที่ดีของเบ้บ</p>
+    <p>อยู่กับเค้าไปนานๆเลยนะ</p>
+    <p class="signature">รักเบ้บที่สุด<br/>— (หมา) 🎂🥂</p>
+
+    <a class="cta" href="javascript:window.print()">พิมพ์การ์ดนี้</a>
+  </main>
+</body>
+</html>
+
